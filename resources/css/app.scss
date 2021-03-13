@@ -4,23 +4,22 @@
 
 @tailwind utilities;
 
-aside {
-    @apply flex items-start justify-center;
-    ul {
-        li {
-            a {
-                @apply inline-block w-full px-4 py-5;
-                @apply text-right text-gray-800 text-lg font-semibold tracking-wider;
-                @apply border-r-2 border-solid border-gray-100;
+nav {
+    @apply w-full flex items-center justify-between;
+    @apply bg-blue-300;
 
-                &.active {
-                    @apply cursor-not-allowed text-gray-100 border-gray-300;
-                }
+    a {
+        @apply w-full px-4 py-5;
+        @apply text-right text-gray-800 text-lg font-semibold tracking-wider;
+        @apply transition-all;
 
-                &:hover:not(.active) {
-                    @apply border-blue-400 bg-blue-200;
-                }
-            }
+        &.active {
+            @apply cursor-not-allowed text-gray-100 border-blue-500;
+            @apply bg-blue-400;
+        }
+
+        &:hover:not(.active) {
+            @apply border-blue-400 bg-blue-200;
         }
     }
 }
@@ -37,14 +36,14 @@ main {
     }
 
     h1 {
-        @apply text-white text-4xl tracking-widest font-hairline mb-3;
+        @apply text-gray-800 text-4xl tracking-widest font-hairline mb-3;
     }
 
     article {
         @apply py-12 text-gray-700 font-bold;
 
         h3 {
-            @apply mb-2 text-2xl text-gray-100;
+            @apply mb-2 text-2xl text-gray-800;
         }
 
         ul {

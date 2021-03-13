@@ -21,6 +21,5 @@ mix.js('resources/js/app.js', 'public/js')
    }).browserSync('fredesk.test');
 
 if (mix.inProduction()) {
-  mix
-   .version();
+  mix.version();
 }
